@@ -1,0 +1,15 @@
+********** EXPERIMENT NAME
+diff with serum switch, Fig.3A-C, siKRAS
+
+********** EXPERIMENT NOTES
+diff with serum switch, Fig.3A-C, siKRAS
+
+********** EXPERIMENT INITIAL PARAMETER AND STATE SETTINGS
+PROG(0)=85
+TRANS(0)=9215
+DIFF(0) = 0
+
+********** EXPERIMENT PARAMETER CHANGES
+serumSwitch = 1
+
+********** EXPERIMENT STATE CHANGES

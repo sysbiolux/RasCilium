@@ -1,0 +1,15 @@
+********** EXPERIMENT NAME
+high serum only
+
+********** EXPERIMENT NOTES
+high serum only
+
+********** EXPERIMENT INITIAL PARAMETER AND STATE SETTINGS
+PROG(0) = 981
+TRANS(0) = 10249
+DIFF(0) = 0
+
+********** EXPERIMENT PARAMETER CHANGES
+serumSwitch = 0
+
+********** EXPERIMENT STATE CHANGES

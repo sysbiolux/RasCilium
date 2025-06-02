@@ -1,0 +1,45 @@
+********** MODEL NAME
+RASdiff
+
+********** MODEL NOTES
+RASdiff, T. Sauter, University of Luxembourg, 01-09/24
+
+********** MODEL STATES
+d/dt(PROG) = r_mP - r_dPROG
+d/dt(TRANS) = r_mPT + r_mT - r_mTD - r_dTRANS
+d/dt(DIFF) = 2 * r_mTD - r_dDIFF
+                                                                     
+PROG(0) = 981
+TRANS(0) = 10249
+DIFF(0) = 0
+
+********** MODEL PARAMETERS
+sP_PT = 1.16
+mT = 1.36
+xPT = 1
+mTD = 1
+d = 1
+serumSwitch = 0
+
+********** MODEL VARIABLES
+serum = 1 - serumSwitch
+PAX7neg = TRANS + DIFF
+sumPTD = PROG + TRANS + DIFF
+pPROG = PROG/sumPTD * 100
+pTRANS = TRANS/sumPTD * 100
+pDIFF = DIFF/sumPTD * 100
+
+********** MODEL REACTIONS
+r_mP = sP_PT*(1-xPT) * PROG *(1+serum)
+r_mPT = sP_PT*xPT * PROG *(1+serum)
+r_mT = mT * TRANS *(1+serum)
+r_mTD = serumSwitch * mTD * TRANS
+r_dPROG = d * PROG
+r_dTRANS = d * TRANS
+r_dDIFF = d * DIFF
+
+********** MODEL FUNCTIONS
+
+********** MODEL EVENTS
+
+********** MODEL MATLAB FUNCTIONS

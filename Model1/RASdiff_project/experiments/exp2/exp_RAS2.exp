@@ -1,0 +1,15 @@
+********** EXPERIMENT NAME
+diff with serum switch, Fig.2A
+
+********** EXPERIMENT NOTES
+diff with serum switch, Fig.2A
+
+********** EXPERIMENT INITIAL PARAMETER AND STATE SETTINGS
+PROG(0)=30
+TRANS(0)=9700
+DIFF(0) = 0
+
+********** EXPERIMENT PARAMETER CHANGES
+serumSwitch = 1
+
+********** EXPERIMENT STATE CHANGES

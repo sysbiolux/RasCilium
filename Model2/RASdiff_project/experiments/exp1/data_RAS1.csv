@@ -1,0 +1,18 @@
+% Measurement file generated: 02-Jan-2012
+
+[Name]
+high serum only
+
+[Notes]
+high serum only
+
+[Components]
+time,PAX7pos,PAX7neg
+
+[Componentnotes]
+
+[Values]
+0,981,10249
+1,875,18403
+2,1663,26268
+3,2063,87252

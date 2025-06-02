@@ -1,0 +1,18 @@
+[Name]
+diff with serum switch, Fig.3A-C, siKRAS
+
+[Notes]
+diff with serum switch, Fig.3A-C, siKRAS
+
+[Components]
+time,pPROG,pTRANS,pDIFF
+
+[Componentnotes]
+
+[Values]
+0,NaN,NaN,NaN
+1,0.80,95.9,3.2
+2,0.66,93.8,5.4
+3,0.75,92.6,6.6
+4,0.81,89.3,9.6
+5,0.78,85.6,13.2

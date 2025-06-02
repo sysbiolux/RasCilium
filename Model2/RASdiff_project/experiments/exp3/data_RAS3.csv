@@ -1,0 +1,18 @@
+[Name]
+diff with serum switch, Fig.3A-I, CTRL
+
+[Notes]
+diff with serum switch, Fig.3A-I, CTRL
+
+[Components]
+time,pPROG,pTRANS,pDIFF
+
+[Componentnotes]
+
+[Values]
+0,NaN,NaN,NaN
+1,0.77,95.0,3.8
+2,0.73,90.4,8.8
+3,0.70,85.9,13.3
+4,0.86,82.6,15.6
+5,0.85,82.1,16.4

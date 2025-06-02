@@ -1,0 +1,65 @@
+********** MODEL NAME
+RASdiff
+
+********** MODEL NOTES
+RASdiff, T. Sauter, University of Luxembourg, 01-10/24
+
+********** MODEL STATES
+d/dt(PROG) = r_mP - r_mPTT - r_dPROG + r_mPcP - rasDiff*r_mPcP*(fRasCil-1) + rasDiff*(1-min(1,fRasCil))*mPcT
+d/dt(TRANS) = r_mT + 2*r_mPTT - r_mTDD - r_dTRANS + r_mPcT + r_mTcT - rasDiff*r_mTcT*(fRasCil-1) + rasDiff*(1-min(1,fRasCil))*mTcD
+d/dt(DIFF) = 2*r_mTDD - r_dDIFF + r_mTcD
+d/dt(PROGc) = - r_dPROGc + rasDiff*r_mPcP*(fRasCil-1) - rasDiff*(1-min(1,fRasCil))*mPcT
+d/dt(TRANSc) = - r_dTRANSc + rasDiff*r_mTcT*(fRasCil-1) - rasDiff*(1-min(1,fRasCil))*mTcD
+                                                                     
+PROG(0) = 100
+TRANS(0) = 7600
+DIFF(0) = 0
+PROGc(0) = 400
+TRANSc(0) = 1900
+
+********** MODEL PARAMETERS
+mP = 0
+mPTT = 0
+mPcP = 0
+mPcT = 0
+mT = 0
+mTDD = 0
+mTcT = 0
+mTcD = 0
+d = 0
+serumSwitch = 0
+rasDiff=0
+fRasCil=1
+
+********** MODEL VARIABLES
+serum = 1 - serumSwitch
+sumPTD = PROG + TRANS + DIFF + PROGc + TRANSc
+PAX7pos = PROG + PROGc
+PAX7neg = TRANS + DIFF + TRANSc
+pPROG = (PROG+PROGc)/sumPTD * 100
+pTRANS = (TRANS+TRANSc)/sumPTD * 100
+pDIFF = DIFF/sumPTD * 100
+pCil = (PROGc+TRANSc)/sumPTD * 100
+
+********** MODEL REACTIONS
+r_mP = mP * PROG *(1+serum)
+r_mPTT = mPTT * PROG *serumSwitch
+r_mPcP = mPcP * PROGc *serum
+r_mPcT = mPcT * PROGc *serumSwitch
+
+r_mT = mT * TRANS *(1+serum)
+r_mTDD = mTDD * TRANS *serumSwitch
+r_mTcT = mTcT * TRANSc *serum
+r_mTcD = mTcD * TRANSc *serumSwitch
+
+r_dPROG = d * PROG
+r_dPROGc = d * PROGc
+r_dTRANS = d * TRANS
+r_dTRANSc = d * TRANSc
+r_dDIFF = d * DIFF
+
+********** MODEL FUNCTIONS
+
+********** MODEL EVENTS
+
+********** MODEL MATLAB FUNCTIONS

@@ -1,0 +1,13 @@
+********** EXPERIMENT NAME
+diff with serum switch, Fig.3G-I, siHRAS
+
+********** EXPERIMENT NOTES
+diff with serum switch, Fig.3G-I, siHRAS
+
+********** EXPERIMENT INITIAL PARAMETER AND STATE SETTINGS
+
+********** EXPERIMENT PARAMETER CHANGES
+serumSwitch = 1
+rasDiff=1
+
+********** EXPERIMENT STATE CHANGES
